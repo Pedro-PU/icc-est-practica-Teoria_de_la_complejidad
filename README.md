@@ -56,12 +56,12 @@ La siguiente imagen muestra la comparación visual de los tiempos de ejecución:
 ---
 
 ## 🔍 Análisis y Conclusiones  
-#### Conclusiónes Jonnathan Saavedra:
+#### Conclusiones Jonnathan Saavedra:
 - **Shell Sort** es el más eficiente para todos los tamaños de arreglos, con tiempos de ejecución significativamente menores.  
 - **Burbuja Mejorado** tuvo tiempos más altos que **Burbuja estándar**, lo cual sugiere que la optimización introducida no fue beneficiosa en este caso específico.  
 - **Selección e Inserción** muestran tiempos similares en arreglos pequeños, pero **Selección** se vuelve más eficiente con tamaños más grandes.  
 - **Burbuja estándar** confirma su ineficiencia en comparación con otros métodos más avanzados.  
-#### Conclusiónes Pedro Pesántez:
+#### Conclusiones Pedro Pesántez:
 - **Shell Sort** fue el más eficiente en todos los casos, reduciendo el tiempo de ejecución gracias a su estrategia de múltiples incrementos.  
 - **Burbuja Mejorado** no superó a Burbuja estándar, lo que indica que su optimización no fue efectiva en este conjunto de pruebas.  
 - **Selección** mostró tiempos competitivos en arreglos pequeños, pero su desempeño disminuyó en conjuntos más grandes debido a su número fijo de comparaciones.  
