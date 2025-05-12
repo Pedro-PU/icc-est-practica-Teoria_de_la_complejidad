@@ -11,14 +11,23 @@
 ---
 
 ## 🛠️ Descripción  
-Esta práctica evalúa el rendimiento de cinco algoritmos de ordenamiento en Python:  
+Esta práctica compara el rendimiento de cinco algoritmos de ordenamiento en Python:  
 - **Burbuja**  
 - **Burbuja Mejorado**  
 - **Selección**  
 - **Inserción**  
-- **Shell**  
+- **Shell Sort**  
 
-Se compararon los tiempos de ejecución en arreglos de distintos tamaños: **5,000, 10,000, 30,000, 50,000 y 100,000 elementos**, generados aleatoriamente.
+Los tiempos de ejecución se miden en arreglos de distintos tamaños: **5,000, 10,000, 30,000, 50,000 y 100,000 elementos**, generados aleatoriamente. El proyecto está estructurado en tres archivos principales:
+
+### 🔹 `sort_methods.py`  
+Contiene la clase encargada de implementar los algoritmos de ordenamiento. Cada método trabaja sobre una copia del arreglo original usando `.copy()` para evitar modificar el conjunto desordenado.
+
+### 🔹 `benchmarking.py`  
+Define la clase `Benchmarking`, que crea un arreglo principal con 100,000 números aleatorios y genera subconjuntos a partir de él. También incluye un método para medir tiempos de ejecución con `perf_counter()` para obtener resultados precisos.
+
+### 🔹 `app.py`  
+Aquí se instancian las clases anteriores y se ejecutan las pruebas. Se organizan los algoritmos en un diccionario, se generan los arreglos y se grafican los resultados usando `matplotlib.pyplot`, mostrando la relación entre tamaño del arreglo y tiempo de ejecución.
 
 ---
 
