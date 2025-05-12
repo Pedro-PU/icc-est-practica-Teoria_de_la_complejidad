@@ -36,7 +36,7 @@ Para ejecutar el proyecto:
 1. **Ejecutar el script:**  
    
    ```bash  
-   python ordenamiento.py  
+   python app.py  
 ---
 ## 📑 Tabla de Resultados  
 
