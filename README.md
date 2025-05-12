@@ -67,3 +67,22 @@ La siguiente imagen muestra la comparación visual de los tiempos de ejecución:
 - **Selección** mostró tiempos competitivos en arreglos pequeños, pero su desempeño disminuyó en conjuntos más grandes debido a su número fijo de comparaciones.  
 - **Inserción** es eficiente para datos casi ordenados, pero su rendimiento empeora conforme aumenta el tamaño del arreglo.  
 - **Burbuja estándar** tuvo los peores tiempos, confirmando su ineficiencia para volúmenes grandes debido a su alta complejidad computacional.  
+
+Los resultados evidencian cómo la eficiencia de los algoritmos se ve afectada por su complejidad al aumentar el tamaño de los arreglos. Aquellos con complejidad O(n²) presentan una disminución considerable en su rendimiento, mientras que Shell Sort, con una complejidad aproximada a O(n log n), logra mantener tiempos de ejecución bajos y consistentes.
+
+**Burbuja (O(n²))**
+Se posicionó como el menos eficiente. A medida que crece el número de elementos, su rendimiento se deteriora notablemente. Con 100,000 elementos, el tiempo fue de 5 minutos y 17 segundos, lo que evidencia que no es adecuado para datos de gran tamaño.
+
+**Burbuja Mejorado (O(n²))**
+Lejos de mejorar, presentó un rendimiento incluso más pobre. Con el mismo número de elementos, alcanzó un tiempo de 8 minutos y 41 segundos, indicando que la supuesta optimización no tuvo efecto positivo en esta prueba.
+
+**Selección (O(n²))**
+Mostró un rendimiento aceptable solo en tamaños pequeños. Con 100,000 elementos, necesitó 3 minutos y 21 segundos. Aunque más rápido que Burbuja Mejorado, sigue siendo ineficiente en grandes volúmenes.
+
+**Inserción (O(n²))**
+Su comportamiento fue parecido al de Selección. En volúmenes pequeños fue competitivo, pero con 100,000 elementos tardó 3 minutos y 47 segundos, reflejando su limitada escalabilidad.
+
+**Shell Sort (O(n log n))**
+Se destacó como el más rápido y estable. Para 100,000 elementos, el tiempo fue de solo 0.41 segundos, demostrando su capacidad para trabajar eficientemente con grandes conjuntos de datos gracias a su uso de incrementos decrecientes.
+
+En resumen, los algoritmos con complejidad cuadrática no son adecuados para manejar grandes cantidades de datos, mientras que Shell Sort se presenta como una opción mucho más efectiva. Elegir correctamente el algoritmo puede marcar una gran diferencia en cuanto a rendimiento y eficiencia del sistema.
