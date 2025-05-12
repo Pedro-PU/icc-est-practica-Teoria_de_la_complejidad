@@ -49,27 +49,47 @@ Para ejecutar el proyecto:
 ---
 ## 📑 Tabla de Resultados  
 
-| Tamaño del Arreglo | Burbuja | Burbuja Mejorado | Selección | Inserción | Shell |
-|--------------------|---------|------------------|-----------|-----------|--------|
-| 5,000 | 0.430512s | 0.616050s | 0.268379s | 0.281681s | **0.006449s** |
-| 10,000 | 1.666225s | 2.629890s | 1.039316s | 1.086095s | **0.014736s** |
-| 30,000 | 23.874193s | 41.591046s | 16.807832s | 19.298807s | **0.094822s** |
-| 50,000 | 70.633919s | 120.358601s | 31.222073s | 29.222461s | **0.111307s** |
-| 100,000 | 176.253780s | 276.323302s | 114.346911s | 138.392213s | **0.442078s** |
+| Tamaño del Arreglo | Burbuja    | Burbuja Mejorado | Selección  | Inserción  | Shell         |
+|--------------------|------------|------------------|------------|------------|---------------|
+| 5,000              | 0.432608s  | 0.647863s         | 0.252903s  | 0.282392s  | **0.006465s** |
+| 10,000             | 1.659429s  | 2.519984s         | 1.035079s  | 1.211551s  | **0.016093s** |
+| 30,000             | 20.753565s | 42.122268s        | 17.061042s | 19.559468s | **0.094597s** |
+| 50,000             | 71.783256s | 115.268520s       | 26.506343s | 30.057701s | **0.109980s** |
+| 100,000            | 183.737352s| 281.819681s       | 114.828962s| 131.718439s| **0.250138s** |
 
-## 📊 Gráfica de Comparación  
+## 📊 Gráfica de Comparación y Resultados en el Terminal  
 La siguiente imagen muestra la comparación visual de los tiempos de ejecución:  
 
-![Gráfica de Comparación](https://github.com/user-attachments/assets/9e731f31-d567-427a-a5be-1143d1b764b3)  
+![Gráfica de Comparación](https://github.com/user-attachments/assets/066e095e-c999-404b-aca2-a61d78c5f60a)
+
+La siguiente imagen muestra los tiempos con cada método en el terminal: 
+
+![Datos de Terminal](https://github.com/user-attachments/assets/0a6bf99f-8f2a-43c7-bead-677090ae178d)  
 
 ---
 
 ## 🔍 Análisis y Conclusiones  
 #### Conclusiones Jonnathan Saavedra:
-- **Shell Sort** es el más eficiente para todos los tamaños de arreglos, con tiempos de ejecución significativamente menores.  
-- **Burbuja Mejorado** tuvo tiempos más altos que **Burbuja estándar**, lo cual sugiere que la optimización introducida no fue beneficiosa en este caso específico.  
-- **Selección e Inserción** muestran tiempos similares en arreglos pequeños, pero **Selección** se vuelve más eficiente con tamaños más grandes.  
-- **Burbuja estándar** confirma su ineficiencia en comparación con otros métodos más avanzados.  
+**Burbuja**
+
+El algoritmo de ordenamiento por burbuja tiene una complejidad temporal de O(n²) en el peor caso, debido a la necesidad de realizar n - 1 pasadas completas sobre el arreglo y comparar pares adyacentes en cada iteración. Aunque es intuitivo y fácil de implementar, su rendimiento decrece considerablemente en conjuntos de datos grandes debido al alto número de comparaciones e intercambios.
+
+**Burbuja Mejorado**
+
+Esta variante introduce una condición de parada basada en la ausencia de intercambios, lo que permite reducir iteraciones innecesarias cuando el arreglo ya está parcialmente ordenado. Sin embargo, su peor caso sigue siendo O(n²), y en esta prueba experimental mostró tiempos superiores al método estándar, lo que sugiere que la optimización aplicada no tuvo el impacto esperado en conjuntos aleatorios.
+
+**Selección**
+
+El ordenamiento por selección tiene una complejidad de O(n²) en todos los casos, ya que siempre realiza n - 1 búsquedas del mínimo, independientemente del estado inicial del arreglo. Aunque requiere menos intercambios que el método burbuja, su número de comparaciones sigue siendo alto, lo que limita su eficiencia en arreglos de gran tamaño.
+
+**Inserción**
+
+El algoritmo de inserción tiene una complejidad de O(n²) en el peor caso, cuando los datos están completamente desordenados y cada elemento debe desplazarse hasta su posición correcta en el subarreglo ordenado. Sin embargo, en el mejor caso, cuando el arreglo ya está ordenado o casi ordenado, su complejidad se reduce a O(n), lo que lo hace una opción eficiente para conjuntos de datos parcialmente ordenados.
+
+**Shell Sort**
+
+El algoritmo Shell Sort es una optimización del método de inserción que utiliza una secuencia de incrementos para comparar y mover elementos distantes antes de aplicar el ordenamiento final. Su complejidad varía dependiendo de la secuencia utilizada, pero en la práctica suele estar en el rango de O(n log n). Debido a la reducción progresiva del intervalo de comparación, este método logra tiempos de ejecución significativamente menores en comparación con los algoritmos de O(n²), lo que lo convierte en la opción más eficiente en esta prueba.
+
 #### Conclusiones Pedro Pesántez:
 Los resultados evidencian cómo la eficiencia de los algoritmos se ve afectada por su complejidad al aumentar el tamaño de los arreglos. Aquellos con complejidad O(n²) presentan una disminución considerable en su rendimiento, mientras que Shell Sort, con una complejidad aproximada a O(n log n), logra mantener tiempos de ejecución bajos y consistentes.
 
